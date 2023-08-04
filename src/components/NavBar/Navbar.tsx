@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+// import React, { useState } from 'react';
+// import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 
 import Logo from '@/assets/Logo.png'
 import { SelectedPage } from '@/shared/types';
@@ -64,7 +64,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
             </div>
         </nav>
     )
-}
+};
 
 export default Navbar;
 
