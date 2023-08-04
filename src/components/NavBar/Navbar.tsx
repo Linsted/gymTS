@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+import { useState } from 'react';
 
 import Logo from '@/assets/Logo.png'
 import { SelectedPage } from '@/shared/types';
+import useMediaQuery from '@/hooks/useMediaQuery';
+import ActionButton from '../ActionButton/ActionButton';
 
 import Link from './Link';
-import useMediaQuery from '@/hooks/useMediaQuery';
 
 type Props = {
     selectedPage: SelectedPage;
@@ -16,7 +17,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
 
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
     const flexBetween = 'flex items-center justify-between';
-    const isAboveMediaScreens = useMediaQuery('(min-width: 1060px)');
+    const isScreenWiderThan = useMediaQuery('(min-width: 1060px)');
 
     return (
         <nav>
@@ -25,7 +26,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
                     <div className={`${flexBetween} w-full gap-16`}>
                         <img alt='logo' src={Logo} />
 
-                        {isAboveMediaScreens
+                        {isScreenWiderThan
                             ? (<div className={`${flexBetween} w-full`}>
                                 <ul className={`${flexBetween} gap-8 text-sm`}>
                                     <li>
@@ -60,7 +61,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
 
                                 <div className={`${flexBetween} gap-8`}>
                                     <p>Sign In</p>
-                                    <button>Become a Member</button>
+                                    <ActionButton setSelectedPage={setSelectedPage}> Become a Member</ActionButton>
                                 </div>
                             </div>)
                             : (
