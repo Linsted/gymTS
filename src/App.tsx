@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import Navbar from "@/components/NavBar/Navbar";
 import { SelectedPage } from "@/shared/types";
+import Home from "@/components/Home/Home";
 
 function App() {
 
@@ -24,13 +25,15 @@ function App() {
 
   }, []);
 
-  return <div className="app bg-gray-20">
-    <Navbar
-      isAtPageTop={isAtPageTop}
-      selectedPage={selectedPage}
-      setSelectedPage={setSelectedPage}
-    />
-  </div>;
+  return (
+    <div className="app bg-gray-20">
+      <Navbar
+        isAtPageTop={isAtPageTop}
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
+      <Home setSelectedPage={setSelectedPage} />
+    </div>);
 }
 
 export default App;
