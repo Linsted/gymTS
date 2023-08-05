@@ -9,16 +9,18 @@ function App() {
   const [isAtPageTop, setIsAtPageTop] = useState<boolean>(true);
 
   useEffect(() => {
-    if (window.scrollY === 0) {
-      setSelectedPage(SelectedPage.Home);
-      setIsAtPageTop(true);
-    } else {
-      setIsAtPageTop(false);
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setSelectedPage(SelectedPage.Home);
+        setIsAtPageTop(true);
+      } else {
+        setIsAtPageTop(false);
+      }
     }
 
-    // window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    // return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
 
   }, []);
 
