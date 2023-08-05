@@ -11,17 +11,19 @@ import Links from '@/components/Links/Links';
 type Props = {
     selectedPage: SelectedPage;
     setSelectedPage: (value: SelectedPage) => void;
+    isAtPageTop: boolean;
 };
 
-const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
+const Navbar = ({ selectedPage, setSelectedPage, isAtPageTop }: Props) => {
 
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
     const flexBetween = 'flex items-center justify-between';
     const isScreenWiderThan = useMediaQuery('(min-width: 1060px)');
+    const navbarBackground = !isAtPageTop && 'bg-primary-100 drop-shadow';
 
     return (
         <nav>
-            <div className={`${flexBetween} fixed top-0 z-30 w-full py-6`}>
+            <div className={` ${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
                 <div className={`${flexBetween} mx-auto w-5/6`}>
                     <div className={`${flexBetween} w-full gap-16`}>
                         <img alt='logo' src={Logo} />
