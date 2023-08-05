@@ -28,16 +28,36 @@ const Home = ({ setSelectedPage }: Props) => {
                 {/* Main header */}
                 <div className="z-10 mt-32 md:basis-3/5">
                     {/* Headings */}
-                    <div className="md:-mt-20">
+                    <motion.div
+                        className="md:-mt-20"
+                        initial='hidden'
+                        whileInView='visible'
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ duration: 0.7 }}
+                        variants={{
+                            hidden: { opacity: 0, x: -70 },
+                            visible: { opacity: 1, x: 0 }
+                        }}
+                    >
                         <div className="relative">
                             <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
                                 <img src={HomePageText} alt='Home page text.' />
                             </div>
                         </div>
-                        <p className='mt-8 text-m md:text-start'>Embark on a transformative fitness journey – where 'no pain, no gain' becomes reality.</p>
-                    </div>
+                        <p className='mt-8 text-m md:text-start'>Embark on a fitness journey – where 'no pain, no gain' becomes reality.</p>
+                    </motion.div>
                     {/* Actions */}
-                    <div className="mt-8 flex items-center gap-8">
+                    <motion.div
+                        className="mt-4 flex items-center gap-8"
+                        initial='hidden'
+                        whileInView='visible'
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ delay: 0.3, duration: 0.7 }}
+                        variants={{
+                            hidden: { opacity: 0, x: -70 },
+                            visible: { opacity: 1, x: 0 }
+                        }}
+                    >
                         <ActionButton setSelectedPage={setSelectedPage}>Join now</ActionButton>
                         <AnchorLink
                             className='text-sm font-bold text-primary-500 underline hover:text-secondary-500'
@@ -46,7 +66,7 @@ const Home = ({ setSelectedPage }: Props) => {
                         >
                             <p>Learn more</p>
                         </AnchorLink>
-                    </div>
+                    </motion.div>
                 </div>
                 {/* Image */}
                 <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
