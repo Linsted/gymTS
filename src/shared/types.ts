@@ -11,3 +11,9 @@ export enum Page{
   OurClasses = 'Our Classes',
   ContactUs = 'Contact Us',
 }
+
+export type BenefitType = {
+    icon: JSX.Element,
+    title: string,
+    description: string
+}

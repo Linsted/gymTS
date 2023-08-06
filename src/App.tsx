@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import Benefits from "@/components/Benefits/Benefits";
 import Home from "@/components/Home/Home";
 import Navbar from "@/components/NavBar/Navbar";
 import { SelectedPage } from "@/shared/types";
@@ -17,7 +18,7 @@ function App() {
       } else {
         setIsAtPageTop(false);
       }
-    }
+    };
 
     window.addEventListener("scroll", handleScroll);
 
@@ -33,6 +34,7 @@ function App() {
         setSelectedPage={setSelectedPage}
       />
       <Home setSelectedPage={setSelectedPage} />
+      <Benefits setSelectedPage={setSelectedPage} />
     </div>);
 }
 
