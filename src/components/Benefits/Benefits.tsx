@@ -21,7 +21,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
 
     return (
         <section
-            id='benefits'
+            id={SelectedPage.Benefits}
             className='mx-auto min-h-full w-5/6 py-20'
         >
             <motion.div

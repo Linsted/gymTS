@@ -13,7 +13,13 @@ export enum Page{
 }
 
 export type BenefitType = {
-    icon: JSX.Element,
-    title: string,
-    description: string
+  icon: JSX.Element,
+  title: string,
+  description: string
+}
+
+export type ClassesType = {
+  name: string,
+  description?: string,
+  image: string
 }
