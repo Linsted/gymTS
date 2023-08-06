@@ -1,12 +1,12 @@
 import { Bars3Icon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 
-import Logo from '@/assets/Logo.png'
-import { SelectedPage } from '@/shared/types';
-import useMediaQuery from '@/hooks/useMediaQuery';
+import Logo from '@/assets/Logo.png';
 import ActionButton from '@/components/ActionButton/ActionButton';
-import MobileMenu from '@/components/MobileMenu/MobileMenu';
 import Links from '@/components/Links/Links';
+import MobileMenu from '@/components/MobileMenu/MobileMenu';
+import useMediaQuery from '@/hooks/useMediaQuery';
+import { SelectedPage } from '@/shared/types';
 
 type Props = {
     selectedPage: SelectedPage;

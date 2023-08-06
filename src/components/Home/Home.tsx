@@ -1,13 +1,12 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { motion } from "framer-motion";
+import Sponsors from './Sponsors.tsx';
 
-import { SelectedPage } from "@/shared/types";
-import ActionButton from "../ActionButton/ActionButton";
-import useMediaQuery from "@/hooks/useMediaQuery";
-import HomePageText from '@/assets/HomePageText.png';
 import HomePageGraphic from '@/assets/HomePageGraphic.png';
-
-import Sponsors from './Sponsors.tsx'
+import HomePageText from '@/assets/HomePageText.png';
+import useMediaQuery from "@/hooks/useMediaQuery";
+import { SelectedPage } from "@/shared/types";
+import { motion } from "framer-motion";
+import ActionButton from "../ActionButton/ActionButton";
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;

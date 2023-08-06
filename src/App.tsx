@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
+import Home from "@/components/Home/Home";
 import Navbar from "@/components/NavBar/Navbar";
 import { SelectedPage } from "@/shared/types";
-import Home from "@/components/Home/Home";
 
 function App() {
 

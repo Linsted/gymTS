@@ -1,5 +1,5 @@
 import { Page, SelectedPage } from '@/shared/types';
-import Link from './Link'
+import Link from './Link';
 
 type Props = {
     classNames: string,
