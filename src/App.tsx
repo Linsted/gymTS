@@ -4,7 +4,8 @@ import Benefits from "@/components/Benefits/Benefits";
 import Home from "@/components/Home/Home";
 import Navbar from "@/components/NavBar/Navbar";
 import { SelectedPage } from "@/shared/types";
-import OurClasses from "./components/OurCLasses/OurClasses";
+import ContactUs from "@/components/ContactUS/ContactUs";
+import OurClasses from "@/components/OurCLasses/OurClasses";
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
       <Home setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
       <OurClasses setSelectedPage={setSelectedPage} />
+      <ContactUs setSelectedPage={setSelectedPage} />
     </div>);
 }
 
