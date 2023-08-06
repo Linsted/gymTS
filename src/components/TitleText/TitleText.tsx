@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 type Props = {
     children: React.ReactNode,
@@ -6,9 +6,9 @@ type Props = {
 
 const TitleText = ({ children }: Props) => {
     return (
-        <h1 className='basis-3/5 font-montserrat text-3xl font-bold'>
+        <h2 className='basis-3/5 font-montserrat text-3xl font-bold'>
             {children}
-        </h1>
+        </h2>
     )
 };
 

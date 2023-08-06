@@ -10,7 +10,7 @@ import ActionButton from "../ActionButton/ActionButton";
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
-}
+};
 
 const Home = ({ setSelectedPage }: Props) => {
 
@@ -45,7 +45,7 @@ const Home = ({ setSelectedPage }: Props) => {
                                 <img src={HomePageText} alt='Home page text.' />
                             </div>
                         </div>
-                        <p className='mt-8 text-m md:text-start'>Embark on a fitness journey – where 'no pain, no gain' becomes reality.</p>
+                        <h1 className='mt-8 text-lg md:text-start'>Embark on a fitness journey – where 'no pain, no gain' becomes reality.</h1>
                     </motion.div>
                     {/* Actions */}
                     <motion.div
@@ -74,9 +74,7 @@ const Home = ({ setSelectedPage }: Props) => {
                     <img src={HomePageGraphic} alt='Home page graphic.' />
                 </div>
             </motion.div>
-
             {isScreenWiderThan && <Sponsors />}
-
         </section>
     )
 }
