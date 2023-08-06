@@ -9,7 +9,11 @@ const Form = () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const onSubmit = async (event: any) => {
         const isValid = await trigger();
-        !isValid && event.preventDefault();
+        if (!isValid) {
+            event.preventDefault();
+            return;
+        }
+        event.target.reset();
     };
 
     return (
@@ -17,6 +21,7 @@ const Form = () => {
             target="_blank"
             onSubmit={onSubmit}
             method="POST"
+            action="https://formsubmit.co/724858c9e40be300f15e426635fb5ddf"
         >
             <input
                 className={inputStyles}
