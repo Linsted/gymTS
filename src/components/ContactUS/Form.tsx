@@ -56,7 +56,7 @@ const Form = () => {
                 </p>
             )}
             <textarea
-                className={inputStyles}
+                className={`${inputStyles} resize-none`}
                 placeholder="Message"
                 rows={4}
                 cols={50}

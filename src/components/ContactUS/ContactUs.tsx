@@ -15,7 +15,9 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             id={SelectedPage.ContactUs}
             className="mx-auto w-5/6 pt-24 pb-32 "
         >
-            <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}>
+            <motion.div
+                onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
+            >
                 {/* Header */}
                 <motion.div
                     className="md:w-3/5"

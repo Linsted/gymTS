@@ -37,7 +37,6 @@ const OurClasses = ({ setSelectedPage }: Props) => {
                     </div>
                 </motion.div>
                 <div className='mt-10 h-[352px] w-full overflow-x-auto overflow-y-hidden'>
-
                     <ul className='width-[2800px] whitespace-nowrap'>
                         {CLASSES.map(({ name, description, image }: ClassesType) => <Class
                             key={name}
@@ -46,7 +45,6 @@ const OurClasses = ({ setSelectedPage }: Props) => {
                             image={image}
                         />)}
                     </ul>
-
                 </div>
             </motion.div>
         </section>

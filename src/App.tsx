@@ -6,6 +6,7 @@ import Navbar from "@/components/NavBar/Navbar";
 import { SelectedPage } from "@/shared/types";
 import ContactUs from "@/components/ContactUS/ContactUs";
 import OurClasses from "@/components/OurCLasses/OurClasses";
+import Footer from "@/components/Footer/Footer";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
       <Benefits setSelectedPage={setSelectedPage} />
       <OurClasses setSelectedPage={setSelectedPage} />
       <ContactUs setSelectedPage={setSelectedPage} />
+      <Footer />
     </div>);
 }
 

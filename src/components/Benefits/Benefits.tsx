@@ -69,7 +69,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
                         src={BenefitsPageGraphic}
                         alt="Benefits section image"
                     />
-                    {/* Dessription */}
+                    {/* Description */}
                     <div>
                         {/* Title */}
                         <div className='relative'>
